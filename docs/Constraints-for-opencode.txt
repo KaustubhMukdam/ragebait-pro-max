@@ -1,0 +1,6 @@
+Constraints
+1. You are not allowed to push the code to GitHub (not even stage the code)
+2. We have to build it Phase by phase. After every phase, we would be planning the next phase on what to do and how to implement the same. After every phase, wait for my instructions to run and check if the phase that we implemented is correct or something needs to be done more.
+3. We should be following a Test-Driven Development (TDD) approach where you have to write the test cases first for phase (lets say we are in phase-1, then we would write the test cases of phase-1, then I would run the test cases. After that you would write the code and then again I would do the testing and share the output to you.
+4. Also you are not allowed to run test cases. I would run the test cases manually and I would share the output to you to check if they are correct or it needs some changes. Also I would do all the installations and would share the output of the same. Your task would be to give me the commands that are compatible to powershell.
+5. Also we are doing all the tasks phase by phase.
