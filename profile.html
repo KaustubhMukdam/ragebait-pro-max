@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Your profile · RageBait Pro Max</title>
+  <meta name="description" content="Your profile. Every save is honored. Eventually.">
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="profile">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <a class="brand" href="index.html">
+      <span class="brand__mark" aria-hidden="true">🔥</span>
+      <span class="brand__name">RageBait</span>
+      <span class="brand__tag">pro max</span>
+    </a>
+    <div class="rage-meter-wrap">
+      <button type="button" class="rage-meter" id="rage-meter" aria-describedby="rage-panel">
+        <span class="rage-meter__state" id="rage-state" aria-hidden="true">🔥</span>
+        <span>Rage</span>
+        <span class="rage-meter__count" id="rage-count">0</span>
+      </button>
+      <div class="rage-meter__panel" id="rage-panel" role="tooltip">
+        <p class="rage-meter__title" id="rage-summary">No rage yet. It builds.</p>
+        <ul class="rage-meter__list" id="rage-list"></ul>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="layout">
+    <section class="card" aria-labelledby="profile-title">
+      <p class="card__eyebrow">Step 2 of 2</p>
+      <h1 class="card__title" id="profile-title">Your profile</h1>
+      <p class="card__sub">Everything you save stays here — there is no server, and yes, that's the point.</p>
+
+      <div class="form">
+        <div class="profile-head">
+          <div class="avatar" id="avatar"><span id="avatar-initials">GR</span></div>
+          <div class="field field--grow">
+            <label class="field__label" for="display-name">Display name</label>
+            <input class="input" type="text" id="display-name" name="display-name"
+                   maxlength="30" autocomplete="nickname" value="Guest Rage">
+          </div>
+          <button class="btn" type="button" id="save-name-btn">Save</button>
+          <span class="chip chip--ok" id="save-name-status" hidden>Saved.</span>
+        </div>
+
+        <div class="field">
+          <label class="field__label" for="visibility">Profile visibility</label>
+          <div class="row">
+            <input class="range" type="range" id="visibility" name="visibility"
+                   min="0" max="100" step="1" value="0">
+            <output class="chip chip--accent" id="visibility-out" for="visibility">0%</output>
+          </div>
+          <span class="field__hint">Drag the slider. It's the only control you'll need. Probably.</span>
+          <div class="slot" id="visibility-slot"></div>
+        </div>
+
+        <div class="field">
+          <label class="field__label" for="bio">Bio</label>
+          <textarea class="textarea" id="bio" name="bio" rows="4" maxlength="1000"
+                    placeholder="Say something nice about yourself."></textarea>
+          <span class="field__hint"><span id="bio-count">0</span>/1000 characters</span>
+        </div>
+
+        <button class="btn btn--primary btn--block" type="button" id="save-btn">Save changes</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>© <span data-year>2026</span> RageBait Pro Max</span>
+    <span>Chaos, carefully designed.</span>
+  </footer>
+
+  <div class="toast-root" id="toast-root" aria-live="polite"></div>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

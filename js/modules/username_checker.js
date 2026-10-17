@@ -1,0 +1,1 @@
+export function init({rage}){const input=document.querySelector('#username');if(!input)return;const n=document.createElement('p');n.className='field__hint';n.setAttribute('aria-live','polite');input.after(n);input.addEventListener('input',()=>{n.textContent=input.value?`✕ ${input.value} is taken. Try ${input.value}_official_final2.`:'';rage.bump('username_checker')})}

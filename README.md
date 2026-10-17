@@ -79,3 +79,51 @@ BUILD STEP 1 (P0, 8 minutes): Create AGENTS.md at the repo root (goal, hard cons
 | shell | `git add AGENTS.md docs && git commit -m "P0: rage contract + core docs"` | Failed: PowerShell 5.1 has no `&&` (parser error, exit 1) — no side effects |
 | edit | `docs/PROMPTS.md` | Correct this table for the failed `&&` attempt and the fallback command |
 | shell | `git add .gitignore AGENTS.md docs; git commit -m "P0: rage contract + core docs"` | First commit on `main` (includes `.gitignore`) |
+
+---
+
+## P2–P6 implementation and delivery
+
+### Golden Prompt
+- **Project:** RageBait Pro Max — Token Treachery
+- **Stack:** Static HTML, CSS tokens, vanilla JavaScript ES modules; no dependencies/build step
+- **Goal:** Complete both-page ragebait flow and prepare screen recording
+- **Current task:** Implement feature modules, verify password witness, document and package
+- **Problem:** Finish quickly without breaking solvability, accessibility, GitHub Pages relative paths, or chaos-off mode
+
+### Prompt (input)
+So we are in P1 now but we have only 7 min (as I have to screen in record in last 2 min)
+Read the files and continue with the work and complete the work till the end
+After that generate a .md file which tells me what all things to screen record
+
+### Model output
+Implemented isolated feature modules for the sign-up and profile pages, registered them, added the eight-rule password witness test, completed README and screen-recording guide, updated tasks, and ran syntax/witness/path checks. The repository archive is the deliverable; screen recording itself remains a manual browser action.
+
+### Tools used
+| Tool | Target (file path or command) | Purpose |
+|---|---|---|
+| shell | `/mnt/data/ragebait-pro-max.zip` | Inspect and extract supplied project archive |
+| shell | `js/modules/username_keyboard.js` | Create shuffled on-screen keyboard feature |
+| shell | `js/modules/phone_incrementer.js` | Create phone incrementer and jump controls |
+| shell | `js/modules/password_rules.js` | Implement cumulative rules and documented witness |
+| shell | `js/modules/submit_dodge.js` | Add bounded submit dodging |
+| shell | `js/modules/confirm_chain.js` | Add three-step swapped confirmation chain |
+| shell | `js/modules/name_save_label.js` | Add deterministic misleading save labels |
+| shell | `js/modules/visibility_dice.js` | Add dice and pi-digit controls |
+| shell | `js/modules/reverse_scroll.js` | Add reverse scroll and keyboard toggle |
+| shell | `js/modules/profile_confirm.js` | Add swapped profile save confirmation |
+| shell | `js/modules/username_checker.js` | Add always-taken username checker |
+| shell | `js/modules/fake_progress.js` | Add fake 99% progress bar |
+| shell | `js/modules/three_click_toast.js` | Require three toast dismiss clicks |
+| shell | `js/modules/cookie_banner.js` | Add runaway cookie reject control |
+| shell | `js/modules/bio_eater.js` | Add bio character eater and warning counter |
+| shell | `js/modules/dob_wheel.js` | Add DOB picker starting in 1900 |
+| edit | `js/registry.js` | Register all isolated modules by page |
+| edit | `css/style.css` | Add shared module styles, responsive behavior, reduced-motion handling |
+| create | `tests/password-witness.mjs` | Programmatically verify all eight rules for `Rage!2026` |
+| command | `node --check js/*.js js/modules/*.js tests/*.mjs` (run individually in shell loop) | Check JavaScript syntax |
+| command | `node tests/password-witness.mjs` | Verify witness satisfies all eight predicates |
+| edit | `docs/tasks.md` | Mark P0–P6 completed and record verification outcomes |
+| edit | `docs/PROMPTS.md` | Append Golden Prompt, input/output and tools table |
+| create | `README.md` | Run instructions, architecture, feature overview and scope note |
+| create | `docs/SCREEN_RECORDING.md` | Timed shot list and recording guardrails |

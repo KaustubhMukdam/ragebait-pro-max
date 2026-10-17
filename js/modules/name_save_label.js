@@ -1,0 +1,1 @@
+export function init({rage}){const b=document.querySelector('#save-name-btn');if(!b)return;const labels=['Saved','Submitted','Archived','Probably saved','Saved (emotionally)'];let i=0;b.addEventListener('click',()=>{b.textContent=labels[i++%labels.length];rage.bump('name_save_label')})}

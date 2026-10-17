@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Create account · RageBait Pro Max</title>
+  <meta name="description" content="Sign up. What could possibly go wrong?">
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="index">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <a class="brand" href="index.html">
+      <span class="brand__mark" aria-hidden="true">🔥</span>
+      <span class="brand__name">RageBait</span>
+      <span class="brand__tag">pro max</span>
+    </a>
+    <div class="rage-meter-wrap">
+      <button type="button" class="rage-meter" id="rage-meter" aria-describedby="rage-panel">
+        <span class="rage-meter__state" id="rage-state" aria-hidden="true">🔥</span>
+        <span>Rage</span>
+        <span class="rage-meter__count" id="rage-count">0</span>
+      </button>
+      <div class="rage-meter__panel" id="rage-panel" role="tooltip">
+        <p class="rage-meter__title" id="rage-summary">No rage yet. It builds.</p>
+        <ul class="rage-meter__list" id="rage-list"></ul>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="layout">
+    <section class="card" aria-labelledby="signup-title">
+      <p class="card__eyebrow">Step 1 of 2</p>
+      <h1 class="card__title" id="signup-title">Create your account</h1>
+      <p class="card__sub">Three tiny fields. What could possibly go wrong.</p>
+
+      <form class="form" id="signup-form">
+        <div class="field">
+          <label class="field__label" for="username">Username</label>
+          <input class="input" type="text" id="username" name="username"
+                 minlength="3" maxlength="24" required
+                 autocomplete="username" placeholder="e.g. totally_normal_user">
+          <span class="field__hint">3–24 characters. Pick wisely — the keyboard won't.</span>
+          <div class="slot" id="username-keyboard"></div>
+        </div>
+
+        <div class="field">
+          <label class="field__label" for="phone">Phone number</label>
+          <input class="input" type="tel" id="phone" name="phone" required
+                 autocomplete="tel" inputmode="numeric" placeholder="000-000-0000">
+          <span class="field__hint">Format: 000-000-0000.</span>
+          <div class="slot" id="phone-slot"></div>
+        </div>
+
+        <div class="field">
+          <label class="field__label" for="password">Password</label>
+          <input class="input" type="password" id="password"
+                 minlength="8" required autocomplete="new-password" placeholder="••••••••">
+          <span class="field__hint">Minimum 8 characters — the rules appear as you type.</span>
+          <ul class="rules" id="password-rules" aria-live="polite"></ul>
+        </div>
+
+        <label class="check" for="terms">
+          <input type="checkbox" id="terms" name="terms" required>
+          <span>I accept the Terms of Service and the Sarcasm Addendum.</span>
+        </label>
+
+        <button class="btn btn--primary btn--block" type="submit" id="submit-btn">Create account</button>
+      </form>
+
+      <p class="card__foot">
+        Already have an account?
+        <a href="profile.html">Log in (we never check)</a>
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>© <span data-year>2026</span> RageBait Pro Max</span>
+    <span>Chaos, carefully designed.</span>
+  </footer>
+
+  <div class="toast-root" id="toast-root" aria-live="polite"></div>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

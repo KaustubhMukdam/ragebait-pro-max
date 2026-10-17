@@ -1,0 +1,1 @@
+export function init({rage}){document.addEventListener('rbm:toast-dismiss',e=>{const t=e.detail.toast;const n=Number(t.dataset.dismisses||0)+1;t.dataset.dismisses=String(n);if(n<3){e.preventDefault();const close=e.detail.close;close.textContent=`Dismiss (${3-n} left)`;t.classList.add('toast--shake');rage.bump('three_click_toast')}else rage.bump('three_click_toast')})}

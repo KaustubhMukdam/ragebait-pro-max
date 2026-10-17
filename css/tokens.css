@@ -1,0 +1,117 @@
+/* ============================================================
+   RageBait Pro Max — design tokens (single source of truth)
+   Every color/spacing/radius/motion value in this project
+   comes from this file. Components never hard-code values.
+   ============================================================ */
+:root {
+  /* --- color: surfaces --- */
+  --bg-0: #0a0b10;
+  --bg-1: #111426;
+  --bg-grad:
+    radial-gradient(1100px 520px at 12% -12%, rgba(255, 106, 61, 0.15), transparent 60%),
+    radial-gradient(900px 480px at 108% 8%, rgba(255, 106, 61, 0.07), transparent 55%),
+    linear-gradient(180deg, var(--bg-1), var(--bg-0));
+  --surface: rgba(255, 255, 255, 0.05);
+  --surface-2: rgba(255, 255, 255, 0.09);
+  --surface-3: rgba(255, 255, 255, 0.14);
+  --scrim: rgba(6, 7, 11, 0.70);
+  --ink-scrim: rgba(0, 0, 0, 0.28);
+  --header-bg: rgba(10, 11, 16, 0.72);
+  --panel-bg: rgba(16, 19, 32, 0.96);
+
+  /* --- color: lines --- */
+  --border: rgba(255, 255, 255, 0.10);
+  --border-strong: rgba(255, 255, 255, 0.20);
+  --accent-bd: rgba(255, 106, 61, 0.45);
+  --ok-bd: rgba(61, 220, 151, 0.45);
+  --bad-bd: rgba(255, 84, 112, 0.45);
+
+  /* --- color: text --- */
+  --text-1: #f2f4f9;
+  --text-2: #a9b0c3;
+  --text-3: #7a8199;
+
+  /* --- color: accent (the one accent) --- */
+  --accent: #ff6a3d;
+  --accent-2: #ffa270;
+  --accent-ink: #21100a;
+  --accent-soft: rgba(255, 106, 61, 0.16);
+
+  /* --- color: semantic (functional states only) --- */
+  --ok: #3ddc97;
+  --ok-soft: rgba(61, 220, 151, 0.14);
+  --bad: #ff5470;
+  --bad-soft: rgba(255, 84, 112, 0.14);
+  --warn: #ffc65c;
+
+  /* --- spacing (4px scale) --- */
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-5: 24px;
+  --sp-6: 32px;
+  --sp-7: 48px;
+  --sp-8: 64px;
+
+  /* --- radius --- */
+  --r-sm: 8px;
+  --r-md: 14px;
+  --r-lg: 22px;
+  --r-full: 999px;
+
+  /* --- typography --- */
+  --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+  --fs-xs: 12px;
+  --fs-sm: 13.5px;
+  --fs-md: 15px;
+  --fs-lg: 18px;
+  --fs-xl: 24px;
+  --fs-2xl: 32px;
+  --lh-tight: 1.2;
+  --lh: 1.55;
+
+  /* --- motion --- */
+  --dur-1: 140ms;
+  --dur-2: 240ms;
+  --dur-3: 420ms;
+  --ease: cubic-bezier(0.2, 0.8, 0.25, 1);
+  --spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* --- glass & elevation --- */
+  --blur: 14px;
+  --blur-heavy: 6px;
+  --shadow-1: 0 8px 30px rgba(0, 0, 0, 0.35);
+  --shadow-2: 0 18px 60px rgba(0, 0, 0, 0.45);
+  --glow-accent: 0 6px 24px rgba(255, 106, 61, 0.35);
+
+  /* --- layout --- */
+  --header-h: 64px;
+  --page-w: 720px;
+  --page-w-wide: 880px;
+  --tap: 44px; /* minimum touch target */
+
+  /* --- z-index scale --- */
+  --z-header: 100;
+  --z-modal: 200;
+  --z-toast: 300;
+}
+
+/* Reduced motion: kill all animation, keep every function working.
+   (AGENTS.md hard constraint 8) */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --dur-1: 1ms;
+    --dur-2: 1ms;
+    --dur-3: 1ms;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 1ms !important;
+    scroll-behavior: auto !important;
+  }
+}
